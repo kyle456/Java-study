@@ -3,7 +3,7 @@
 import java.util.Scanner;
 
 public class calender {
-	
+
 	public static int monthDay(int year, int month) {
 		if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
 			return 31;
@@ -12,8 +12,7 @@ public class calender {
 		} else {
 			if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 				return 29;
-			}
-			else {
+			} else {
 				return 28;
 			}
 		}
@@ -47,41 +46,39 @@ public class calender {
 		for (int j = 1; j < month; j++) {
 			first += monthDay(year, j) % 7;
 		}
-		
+
 		int day = first % 7; // 입력한 month의 1일의 요일
 		int num = 1; // month의 일 표시
 		int max = monthDay(year, month); // 해당 month가 가지는 최대 일 수
 		boolean start = false;
-		
+
 		System.out.println(" Sun  Mon  Tue  Wed  Thu  Fri  Sat ");
-		
-		loop:
-		for (int row = 0; row <= 5; row++) {
+
+		loop: for (int row = 0; row <= 5; row++) {
 			for (int column = 0; column <= 6; column++) {
-				if(row == 0 && !start) {
+				if (row == 0 && !start) {
 					// 달력의 첫 행
-					if(column == day) {
+					if (column == day) {
 						// 시작 일에 도달하면
 						start = true;
-					}
-					else {
+					} else {
 						// 시작 일에 도달 전에는 공백
 						System.out.print("     ");
 						continue;
 					}
 				}
-				
+
 				System.out.printf("  %02d ", num);
 				num++;
-				
-				if(num > max) {
+
+				if (num > max) {
 					// 최대 일 수에 도달하면 break loop
 					break loop;
 				}
 			}
 			System.out.println("");
 		}
-		
+
 	}
 
 }
