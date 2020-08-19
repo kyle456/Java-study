@@ -7,7 +7,7 @@ public class to_do_list {
 
 		System.out.println("+----------------------+");
 		System.out.println("| 1. 일정 등록");
-		System.out.println("| 2. 일정 검색 ");
+		System.out.println("| 2. 일정 검색 및 변경");
 		System.out.println("| 3. 달력 보기");
 		System.out.println("| h. 도움말    q. 종료");
 		System.out.println("+----------------------+");
@@ -29,7 +29,7 @@ public class to_do_list {
 	        case 'h':
 	            System.out.println("<일정 관리 프로그램 도움말>");
 	            System.out.println("(1. 일정 등록)을 선택하시면 일정을 등록하고 싶은 날짜와 일정 내용을 입력하시면 해당 일정이 저장됩니다.");
-	            System.out.println("(2. 일정 검색)을 선택하시면 검색하고 싶은 날짜를 입력하시면 해당 날짜에 저장 된 일정을 보여줍니다. 일정 변경 또한 가능합니다.");
+	            System.out.println("(2. 일정 검색 및 변경)을 선택하시면 검색하고 싶은 날짜를 입력하시면 해당 날짜에 저장 된 일정을 보여줍니다. 일정 변경 또한 가능합니다.");
 	            System.out.println("(3. 달력 보기)를 선택하시면 오늘 날짜를 자동으로 인식하여 해당 월의 달력을 보여줍니다.");
 	            System.out.println("(h. 도움말)을 선택하시면 지금 보고 계시는 이 도움말을 보여줍니다.");
 	            System.out.println("(q. 종료)를 선택하시면 일정 관리 프로그램이 종료됩니다.");
