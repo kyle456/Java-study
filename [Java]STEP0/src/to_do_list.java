@@ -30,8 +30,8 @@ public class to_do_list {
 	            
 	            break;
 	        case 'q':
-	            
-	            break;
+	        	System.out.println("종료합니다. 이용해 주셔서 감사합니다.");
+	            System.exit(0);
 	        default :
 	            System.out.println("잘 못 입력하셨습니다. 다시 선택해주세요.");
 			}
