@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 public class to_do_list {
 	
@@ -18,15 +20,8 @@ public class to_do_list {
 		}
 	}
 	
-	public static void calender(HashMap<String, ArrayList<String>> listMap) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.print("년도를 입력하세요: ");
-		int year = scanner.nextInt();
-		System.out.print("월을 입력하세요: ");
-		int month = scanner.nextInt();
-		System.out.println("");
-
-		System.out.println(year + "년 " + month + "월의 달력");		
+	public static void calender(HashMap<String, ArrayList<String>> listMap, int year, int month) {		
+		System.out.println(" " + year + "년 " + month + "월의 달력");		
 
 		int sum = 0;
 
@@ -67,6 +62,7 @@ public class to_do_list {
 					}
 				}	
 				
+				// 10이하의 month, num과 listMap에 저장된 month, day와의 자릿수 차이를 해결(ex. 2와 02의 자릿수 차이)
 				String monthString = Integer.toString(month);
 				String dayString = Integer.toString(num);
 				
@@ -81,8 +77,10 @@ public class to_do_list {
 				String date = year + "-" + monthString + "-" + dayString;
 				
 				if (listMap.containsKey(date)) {
+					// if plans exist
 					System.out.printf("  %02d.", num);
 				} else {
+					// if plans not exist
 					System.out.printf("  %02d ", num);
 				}				
 				
@@ -103,13 +101,17 @@ public class to_do_list {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		HashMap<String, ArrayList<String>> listMap = new HashMap<String, ArrayList<String>>();
-
-		System.out.println("+----------------------+");
+			
+		String today = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")); // 오늘 날짜
+		String[] toDate = today.split("-"); // 오늘 날짜를 년, 월, 일로 나눔
+		calender(listMap, Integer.parseInt(toDate[0]), Integer.parseInt(toDate[1])); // 오늘 날짜가 포함 된 월의 달력 자동 출력
+		
+		System.out.println("+---------------------------------+");	
 		System.out.println("| 1. 일정 등록");
 		System.out.println("| 2. 일정 검색 및 변경");
 		System.out.println("| 3. 달력 보기");
 		System.out.println("| h. 도움말    q. 종료");
-		System.out.println("+----------------------+");
+		System.out.println("+---------------------------------+");
 
 		while (true) {
 			System.out.print("명령 (1.일정 등록  2.일정 검색 및 변경  3.달력 보기  h.도움말  q.종료)\n> ");
@@ -122,6 +124,7 @@ public class to_do_list {
 				String theDate = scanner.nextLine();
 
 				if (!listMap.containsKey(theDate)) {
+					// 기존의 일정이 없다면, 빈 Arraylist를 추가한다.
 					ArrayList<String> emptyList = new ArrayList<String>();
 					listMap.put(theDate, emptyList);
 				}
@@ -140,11 +143,13 @@ public class to_do_list {
 				String findDate = scanner.nextLine();
 
 				if (listMap.containsKey(findDate)) {
+					// 해당 날짜에 일정이 있다면
 					ArrayList<String> schedule = listMap.get(findDate);
 
 					System.out.printf("%d개의 일정이 있습니다.\n", schedule.size());
 
 					for (int i = 0; i < schedule.size(); i++) {
+						// 존재하는 일정 전체 출력
 						System.out.printf("%d.%s\n", i + 1, schedule.get(i));
 					}
 
@@ -153,8 +158,10 @@ public class to_do_list {
 						String change = scanner.nextLine();
 
 						if (change.equals("1")) {
+							// 일정 변경한다.
 							System.out.println("현재 등록되어 있는 일정입니다.");
 							for (int i = 0; i < schedule.size(); i++) {
+								// 존재하는 일정 전체 출력
 								System.out.printf("%d.%s\n", i + 1, schedule.get(i));
 							}
 
@@ -175,19 +182,27 @@ public class to_do_list {
 								System.out.println("정상적으로 일정이 변경되었습니다.");
 							}
 						} else if (change.equals("2")) {
+							// 일정 변경하지 않는다.
 							break;
 						} else {
+							// 1이나 2 외에 엉뚱한 값을 입력하면
 							System.out.println("잘 못 입력하셨습니다. 다시 선택해주세요.");
 						}
 					}
 
 				} else {
+					// 해당 날짜에 일정이 없다면
 					System.out.println("해당 날짜에 일정이 존재하지 않습니다.");
 				}
 				break;
 
-			case '3':
-				calender(listMap);
+			case '3':				
+				System.out.print("년도를 입력하세요: ");
+				int year = scanner.nextInt();
+				System.out.print("월을 입력하세요: ");
+				int month = scanner.nextInt();
+				System.out.println("");
+				calender(listMap, year, month);
 				break;
 
 			case 'h':
