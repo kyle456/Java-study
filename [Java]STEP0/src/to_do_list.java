@@ -52,6 +52,33 @@ public class to_do_list {
 					for (int i = 0; i < schedule.size(); i++) {
 						System.out.printf("%d.%s\n", i + 1, schedule.get(i));
 					}
+
+					while (true) {
+						System.out.print("일정을 변경하시겠습니까?(예:1 / 아니오:2)\n> ");
+						String change = scanner.nextLine();
+
+						if (change.equals("1")) {
+							System.out.println("현재 등록되어 있는 일정입니다.");
+							for (int i = 0; i < schedule.size(); i++) {
+								System.out.printf("%d.%s\n", i + 1, schedule.get(i));
+							}
+							
+							System.out.print("변경할 일정의 번호를 입력하세요.(숫자만 입력)\n> ");
+							int number = scanner.nextInt();
+							scanner.nextLine();
+							
+							System.out.print("변경 내용을 입력하세요.\n> ");
+							String changeList = scanner.nextLine();
+							
+							schedule.set(number - 1, changeList);
+							System.out.println("정상적으로 일정이 변경되었습니다.");
+						} else if (change.equals("2")) {
+							break;
+						} else {
+							System.out.println("잘 못 입력하셨습니다. 다시 선택해주세요.");
+						}
+					}
+
 				} else {
 					System.out.println("해당 날짜에 일정이 존재하지 않습니다.");
 				}
