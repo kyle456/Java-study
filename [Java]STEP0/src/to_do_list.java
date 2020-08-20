@@ -18,7 +18,7 @@ public class to_do_list {
 		}
 	}
 	
-	public static void calender() {
+	public static void calender(HashMap<String, ArrayList<String>> listMap) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("년도를 입력하세요: ");
 		int year = scanner.nextInt();
@@ -65,9 +65,27 @@ public class to_do_list {
 						System.out.print("     ");
 						continue;
 					}
+				}	
+				
+				String monthString = Integer.toString(month);
+				String dayString = Integer.toString(num);
+				
+				if(month < 10) {
+					monthString = "0" + Integer.toString(month);
 				}
-
-				System.out.printf("  %02d ", num);
+				
+				if(num < 10) {
+					dayString = "0" + Integer.toString(num);
+				}
+				
+				String date = year + "-" + monthString + "-" + dayString;
+				
+				if (listMap.containsKey(date)) {
+					System.out.printf("  %02d.", num);
+				} else {
+					System.out.printf("  %02d ", num);
+				}				
+				
 				num++;
 
 				if (num > max) {
@@ -169,7 +187,7 @@ public class to_do_list {
 				break;
 
 			case '3':
-				calender();
+				calender(listMap);
 				break;
 
 			case 'h':
