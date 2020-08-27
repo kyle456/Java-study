@@ -12,7 +12,7 @@ public class B200828_Average_Score {
 			int score = scanner.nextInt();
 
 			if (score < 40) {
-				score = 40;
+				score = 40; // 40미만일 경우 보충학습 & 점수 40점 부여
 			}
 
 			total += score;
