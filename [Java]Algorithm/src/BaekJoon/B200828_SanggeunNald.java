@@ -3,6 +3,7 @@ package BaekJoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class B200828_SanggeunNald {
 
@@ -20,17 +21,10 @@ public class B200828_SanggeunNald {
 			drink[i] = Integer.parseInt(br.readLine());
 		}
 		
-		int cheapest = burger[0] + drink[0];
+		Arrays.sort(burger);
+		Arrays.sort(drink);
 		
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 2; j++) {
-				if(cheapest > burger[i] + drink[j]) {
-					cheapest = burger[i] + drink[j];
-				}
-			}
-		}
-		
-		System.out.print(cheapest - 50);
+		System.out.print(burger[0] + drink[0] - 50);
 		br.close();
 
 	}
