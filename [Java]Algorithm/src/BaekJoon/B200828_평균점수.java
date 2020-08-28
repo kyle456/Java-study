@@ -2,7 +2,7 @@ package BaekJoon;
 
 import java.util.Scanner;
 
-public class B200828_Average_Score {
+public class B200828_Æò±ÕÁ¡¼ö {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
