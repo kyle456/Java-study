@@ -11,19 +11,18 @@ public class B200828_SanggeunNald {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int[] burger = new int[3];
 		int[] drink = new int[2];
-		
-		
-		for(int i = 0; i < 3; i++) {
+
+		for (int i = 0; i < 3; i++) {
 			burger[i] = Integer.parseInt(br.readLine());
 		}
-		
-		for(int i = 0; i < 2; i++) {
+
+		for (int i = 0; i < 2; i++) {
 			drink[i] = Integer.parseInt(br.readLine());
 		}
-		
+
 		Arrays.sort(burger);
 		Arrays.sort(drink);
-		
+
 		System.out.print(burger[0] + drink[0] - 50);
 		br.close();
 
