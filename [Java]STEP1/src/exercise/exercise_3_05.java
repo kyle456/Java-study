@@ -3,7 +3,7 @@
 
 package exercise;
 
-public class exercise_2_05 {
+public class exercise_3_05 {
 
 	public static void main(String[] args) {
 		int value = 356;

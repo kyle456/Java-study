@@ -3,7 +3,7 @@
 
 package exercise;
 
-public class exercise_2_08 {
+public class exercise_3_08 {
 
 	public static void main(String[] args) {
 		double x = 5.0;

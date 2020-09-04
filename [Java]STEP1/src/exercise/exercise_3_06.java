@@ -2,7 +2,7 @@
 
 package exercise;
 
-public class exercise_2_06 {
+public class exercise_3_06 {
 
 	public static void main(String[] args) {
 		int lengthTop = 5;

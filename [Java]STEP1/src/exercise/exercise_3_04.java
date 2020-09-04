@@ -2,7 +2,7 @@
 
 package exercise;
 
-public class exercise_2_04 {
+public class exercise_3_04 {
 
 	public static void main(String[] args) {
 		int pencils = 534;
