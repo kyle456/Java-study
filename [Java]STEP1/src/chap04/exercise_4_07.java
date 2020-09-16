@@ -1,6 +1,4 @@
-// while¹®°ú Scanner¸¦ ÀÌ¿ëÇÏ¿© Å°º¸µå·ÎºÎÅÍ ÀÔ·ÂµÈ µ¥ÀÌÅÍ·Î ¿¹±Ý, Ãâ±Ý, Á¶È¸, Á¾·á ±â´ÉÀ» ±¸ÇöÇÏ¶ó
-
-package exercise;
+package chap04;
 
 import java.util.Scanner;
 
@@ -13,25 +11,25 @@ public class exercise_4_07 {
 
 		while (run) {
 			System.out.println("----------------------------");
-			System.out.println("1.¿¹±Ý | 2.Ãâ±Ý | 3.ÀÜ°í | 4.Á¾·á");
+			System.out.println("1.ì˜ˆê¸ˆ | 2.ì¶œê¸ˆ | 3.ìž”ê³   | 4.ì¢…ë£Œ");
 			System.out.println("----------------------------");
-			System.out.print("¼±ÅÃ> ");
+			System.out.print("ì„ íƒ> ");
 
 			int menu = scanner.nextInt();
 
 			switch (menu) {
 			case 1:
-				System.out.print("¿¹±Ý¾×> ");
+				System.out.print("ì˜ˆê¸ˆì•¡> ");
 				int inMoney = scanner.nextInt();
 				balance += inMoney;
 				break;
 			case 2:
-				System.out.print("Ãâ±Ý¾×> ");
+				System.out.print("ì¶œê¸ˆì•¡> ");
 				int outMoney = scanner.nextInt();
 				balance -= outMoney;
 				break;
 			case 3:
-				System.out.println("ÀÜ°í> " + balance);
+				System.out.println("ìž”ê³ > " + balance);
 				break;
 			case 4:
 				run = false;
@@ -41,7 +39,7 @@ public class exercise_4_07 {
 			System.out.println();
 		}
 
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ëž¨ ì¢…ë£Œ");
 	}
 
 }

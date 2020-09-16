@@ -1,6 +1,4 @@
-// for¹®À» ÀÌ¿ëÇÏ¿© 1ºÎÅÍ 100±îÁöÀÇ Á¤¼ö Áß 3ÀÇ ¹è¼öÀÇ ÃÑÇÕÀ» ±¸ÇÏ±â
-
-package exercise;
+package chap04;
 
 public class exercise_4_03 {
 
@@ -13,7 +11,7 @@ public class exercise_4_03 {
 			}
 		}
 
-		System.out.println("3ÀÇ ¹è¼öÀÇ ÇÕ: " + sum);
+		System.out.println("3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: " + sum);
 
 	}
 

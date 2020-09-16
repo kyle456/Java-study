@@ -1,7 +1,4 @@
-// 중첩 for문을 이용하여 방정식 4x+5y=60 의 모든 해를 구하여 (x,y)의 형태로 출력하라.
-// 단 x와 y는 10 이하의 자연수
-
-package exercise;
+package chap04;
 
 public class exercise_4_05 {
 

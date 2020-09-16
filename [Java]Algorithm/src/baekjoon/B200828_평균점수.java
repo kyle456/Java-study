@@ -1,8 +1,8 @@
-package BaekJoon;
+package baekjoon;
 
 import java.util.Scanner;
 
-public class B200828_Æò±ÕÁ¡¼ö {
+public class B200828_í‰ê· ì ìˆ˜ {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -12,7 +12,7 @@ public class B200828_Æò±ÕÁ¡¼ö {
 			int score = scanner.nextInt();
 
 			if (score < 40) {
-				score = 40; // 40¹Ì¸¸ÀÏ °æ¿ì º¸ÃæÇĞ½À & Á¡¼ö 40Á¡ ºÎ¿©
+				score = 40;
 			}
 
 			total += score;

@@ -1,10 +1,10 @@
-package BaekJoon;
+package baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B200828_∫∞¬Ô±‚09 {
+public class B200828_Î≥ÑÏ∞çÍ∏∞09 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

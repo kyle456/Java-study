@@ -1,24 +1,22 @@
-package BaekJoon;
+package baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B200830_¼ÕÀÍºĞ±âÁ¡ {
+public class B200830_ì†ìµë¶„ê¸°ì  {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String[] inputData = br.readLine().split(" ");
-		int fixedCost = Integer.parseInt(inputData[0]); // °íÁ¤ºñ¿ë
-		int unfixedCost = Integer.parseInt(inputData[1]); // °¡º¯ºñ¿ë(1´ë ´ç)
-		int price = Integer.parseInt(inputData[2]); // °¡°İ(1´ë ´ç)
+		int fixedCost = Integer.parseInt(inputData[0]);
+		int unfixedCost = Integer.parseInt(inputData[1]);
+		int price = Integer.parseInt(inputData[2]);
 		
 		if (unfixedCost >= price) {
-			// °¡º¯ºñ¿ëÀÌ °¡°İ°ú Å©°Å³ª °°À¸¸é ¼ÕÀÍºĞ±âÁ¡À» ³ÑÀ» ¼ö ¾øÀ½
 			System.out.println(-1);
 			System.exit(0);
 		} else {
-			// ¼ÕÀÍºĞ±âÁ¡ = (°íÁ¤ºñ¿ë / (°¡°İ - °¡º¯ºñ¿ë)) + 1
 			System.out.println((fixedCost / (price - unfixedCost)) + 1);
 		}
 		

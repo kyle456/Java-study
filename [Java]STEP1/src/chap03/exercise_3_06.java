@@ -1,6 +1,4 @@
-// 윗면 5, 아랫면 10, 높이 7인 사다리꼴의 넓이 구하기
-
-package exercise;
+package chap03;
 
 public class exercise_3_06 {
 

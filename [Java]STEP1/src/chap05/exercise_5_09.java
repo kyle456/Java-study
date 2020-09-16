@@ -1,6 +1,4 @@
-// Å°º¸µå·ÎºÎÅÍ ÇĞ»ı ¼ö¿Í °¢ ÇĞ»ıµéÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ¼­, ÃÖ°í Á¡¼ö ¹× Æò±Õ Á¡¼ö¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-
-package exercise;
+package chap05;
 
 import java.util.Scanner;
 
@@ -14,14 +12,14 @@ public class exercise_5_09 {
 
 		while (run) {
 			System.out.println("--------------------------------------------");
-			System.out.println("1.ÇĞ»ı¼ö | 2.Á¡¼öÀÔ·Â | 3.Á¡¼ö¸®½ºÆ® | 4.ºĞ¼® | 5.Á¾·á");
+			System.out.println("1.í•™ìƒìˆ˜ | 2.ì ìˆ˜ì…ë ¥  | 3.ì ìˆ˜ë¦¬ìŠ¤íŠ¸  | 4.ë¶„ì„  | 5.ì¢…ë£Œ");
 			System.out.println("--------------------------------------------");
-			System.out.print("¼±ÅÃ> ");
+			System.out.print("ì„ íƒ> ");
 
 			int selectNo = scanner.nextInt();
 
 			if (selectNo == 1) {
-				System.out.print("ÇĞ»ı¼ö> ");
+				System.out.print("í•™ìƒìˆ˜> ");
 				studentNum = scanner.nextInt();
 				scores = new int[studentNum];
 			} else if (selectNo == 2) {				
@@ -44,15 +42,15 @@ public class exercise_5_09 {
 					sum += scores[i];
 				}
 
-				System.out.println("ÃÖ°í Á¡¼ö: " + max);
-				System.out.println("Æò±Õ Á¡¼ö: " + ((double) sum / studentNum));
+				System.out.println("ìµœê³  ì ìˆ˜: " + max);
+				System.out.println("í‰ê·  ì ìˆ˜: " + ((double) sum / studentNum));
 
 			} else if (selectNo == 5) {
 				run = false;
 			}
 		}
 
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 
 	}
 

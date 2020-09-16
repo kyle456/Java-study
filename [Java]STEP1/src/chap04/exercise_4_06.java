@@ -1,6 +1,4 @@
-// for문을 이용하여 *로 직각삼각형 출력하기
-
-package exercise;
+package chap04;
 
 public class exercise_4_06 {
 

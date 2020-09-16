@@ -1,6 +1,4 @@
-// 주어진 배열의 항목에서 최대값을 구하라. (for문을 이용할 것)
-
-package exercise;
+package chap05;
 
 public class exercise_5_07 {
 

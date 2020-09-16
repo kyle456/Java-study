@@ -1,18 +1,18 @@
-package BaekJoon;
+package baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B200829_±×·ì´Ü¾îÃ¼Ä¿ {
+public class B200829_ê·¸ë£¹ë‹¨ì–´ì²´ì»¤ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int num = Integer.parseInt(br.readLine()); // ÀÔ·Â ´Ü¾î °³¼ö
-		int count = 0; // ±×·ì ´Ü¾î °³¼ö(Ãâ·Â °á°ú)
+		int num = Integer.parseInt(br.readLine());
+		int count = 0;
 		
 		for (int i = 0; i < num; i++) {
-			String word = br.readLine(); // ÀÔ·Â ´Ü¾î
+			String word = br.readLine();
 			String[] alphabet = word.split("");
 			int index = 0;
 			boolean group = true;

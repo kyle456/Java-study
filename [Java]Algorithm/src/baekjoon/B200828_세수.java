@@ -1,11 +1,11 @@
-package BaekJoon;
+package baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class B200828_¼¼¼ö {
+public class B200828_ì„¸ìˆ˜ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
