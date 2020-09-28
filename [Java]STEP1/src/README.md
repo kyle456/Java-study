@@ -6,4 +6,5 @@
 - exercise 3 : 3장 연산자 확인문제  
 - exercise 4 : 4장 조건문과 반복문 확인문제  
 - exercise 5 : 5장 참조 타입 확인문제  
-- exercise 6 : 6장 클래스 확인문제
+- exercise 6 : 6장 클래스 확인문제  
+- exercise 8 : 8장 클래스 확인문제
