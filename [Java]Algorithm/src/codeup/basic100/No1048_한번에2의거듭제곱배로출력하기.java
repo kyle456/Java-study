@@ -12,7 +12,7 @@ public class No1048_한번에2의거듭제곱배로출력하기 {
 	    long first = Long.parseLong(twoNumbersSplit[0]);
 		long second = Long.parseLong(twoNumbersSplit[1]);
 		
-		//n의 a승 = (n << a) / n
+		//2의 a승 = (2 << a) / 2
 		System.out.println(first * ((2 << second) / 2));
 	}
 
