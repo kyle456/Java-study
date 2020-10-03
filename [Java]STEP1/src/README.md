@@ -8,4 +8,5 @@
 - exercise 5 : 5장 참조 타입  
 - exercise 6 : 6장 클래스  
 - exercise 8 : 8장 인터페이스  
-- exercise 9 : 9장 중첩 클래스와 중첩 인터페이스
+- exercise 9 : 9장 중첩 클래스와 중첩 인터페이스  
+- exercise 10: 10장 예외 처리  
