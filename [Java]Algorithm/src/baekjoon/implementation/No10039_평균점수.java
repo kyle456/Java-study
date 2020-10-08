@@ -1,8 +1,8 @@
-package baekjoon;
+package baekjoon.implementation;
 
 import java.util.Scanner;
 
-public class B200828_평균점수 {
+public class No10039_평균점수 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

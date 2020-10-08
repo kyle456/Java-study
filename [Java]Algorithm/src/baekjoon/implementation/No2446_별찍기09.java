@@ -1,10 +1,10 @@
-package baekjoon;
+package baekjoon.implementation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B200828_별찍기09 {
+public class No2446_별찍기09 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

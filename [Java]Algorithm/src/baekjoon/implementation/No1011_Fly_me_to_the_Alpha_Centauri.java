@@ -1,10 +1,10 @@
-package baekjoon;
+package baekjoon.implementation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B200830_Fly_me_to_the_Alpha_Centauri {
+public class No1011_Fly_me_to_the_Alpha_Centauri {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
