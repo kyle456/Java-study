@@ -10,6 +10,6 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return id.toString() + ": " + name.toString();
+		return id + ": " + name;
 	}
 }
